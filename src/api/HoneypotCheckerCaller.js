@@ -11,11 +11,10 @@ export default class HoneypotCheckerCaller {
      * 1 BNB Value
      * for simulation
      */
-    this.gasLimit = 5000000;
-    this.gasPrice = this.web3.utils.toWei("5", "gwei");
+    this.gasLimit = "50000000";
+    this.gasPrice = this.web3.utils.toWei("0.1", "gwei");
     this.value = this.web3.utils.toWei("0.01");
  
-
     this.honeypotCheckerContract = new web3.eth.Contract(
       honeypotCheckerAbi,
       checkerContract

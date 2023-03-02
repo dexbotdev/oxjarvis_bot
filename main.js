@@ -2,7 +2,7 @@
 import TelegramBot from 'node-telegram-bot-api'; 
 import getTokenDetails from './src/lib/checkall.js';
 
-var token = "6186706488:AAEOszfddBTJFHFD3ARt0WSOtwkHIh59ywg"
+var token = "6012112507:AAFijFay2SNtEsHTaYEmOLV-Cm902H_Wn9Y"
 
 var bot = new TelegramBot(token, { polling: true });
   
@@ -12,7 +12,7 @@ bot.on("error", (err) => console.log(err));
 
 bot.onText(/\/start/, function (msg, match) {
     var chatId = msg.chat.id 
-    const response = `✅<b>CoinaLyzer Token Scanner</b>✅
+    const response = `✅<b>ArbinoLyzer Token Scanner</b>✅
     <i>Enter /info tokenaddress  to display the token statistics</i>`
     bot.sendMessage(chatId,response,{parse_mode : "HTML"});
 
@@ -20,7 +20,7 @@ bot.onText(/\/start/, function (msg, match) {
 
 bot.onText(/\/help/, function (msg, match) {
     var chatId = msg.chat.id 
-    const response = `✅<b>CoinaLyzer Token Scanner</b>✅
+    const response = `✅<b>ArbinoLyzer Token Scanner</b>✅
     <i>Enter /info tokenaddress  to display the token statistics</i>`
     bot.sendMessage(chatId,response,{parse_mode : "HTML"});
 
@@ -35,7 +35,7 @@ bot.onText(/\/info (.+)/, function (msg, match) {
         if(data.status===0)
             bot.sendMessage(chatId,data.mesg);
         else {
-            const msg = `✅<b>CoinaLyzer Token Scanner</b>✅
+            const msg = `✅<b>ArbinoLyzer Token Scanner</b>✅
             <i>Do your own due dilligence before investing</i> 
             <b>Token Name:</b> ${data.name}
             <b>Token Symbol:</b> ${data.symbol}
